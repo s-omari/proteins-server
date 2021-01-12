@@ -28,7 +28,10 @@ db.mongoose.connect(
     process.exit();
 });
 
+// routes
 require('./app/routes/protein.routes')(app)
+require('./app/routes/auth.routes')(app);
+require('./app/routes/user.routes')(app);
 
 //define port and listen
 const PORT = process.env.port || 8080;
